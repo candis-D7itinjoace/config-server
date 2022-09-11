@@ -5,7 +5,18 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/notOnlyCode-B/pfe-config-server
+          uri: https://github.com/candis-D7itinjoace/configs-for-asserter-project
           clone-on-start: true
 server:
   port: 8888
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      default-zone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    hostname: eureka-0
