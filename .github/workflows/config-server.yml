@@ -25,7 +25,7 @@ jobs:
         mvn clean install package
         
     - name: build docker image
-      run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/config-server
+      run: docker build . --file Dockerfile --tag ${{secrets.ACR_SERVER_URL}}/config-server
     - name: login to ACR
       uses: Azure/docker-login@v1
       with:
@@ -34,7 +34,7 @@ jobs:
         login-server: ${{secrets.ACR_SERVER_URL}}
     
     - name: Push the docker image to docker hub
-      run: docker push ${{secrets.DOCKER_USER}}/config-server
+      run: docker push ${{secrets.ACR_SERVER_URL}}/config-server
 
 
 
