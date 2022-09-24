@@ -3,10 +3,8 @@ name: service registryconfig server CI
 on:
   push:
     branches: [ "master" ]
-<<<<<<< HEAD
   workflow_dispatch:
-=======
->>>>>>> d891ecaa215fc556d976df4b71579c480627e752
+    
 
 jobs:
 
